@@ -3,7 +3,7 @@ import NavLink from './NavLink';
 
 export default function Header() {
     return (
-        <header className='fixed top-0 left-0 right-0 z-50'>
+        <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-teal/10 text-teal'>
             <nav className='max-w-7xl mx-auto px-8 py-5 flex justify-between items-center'>
                 <Logo></Logo>
                 <div className='flex gap-12'>
