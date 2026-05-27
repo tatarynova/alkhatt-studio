@@ -1,5 +1,7 @@
 import Logo from './Logo';
 import NavLink from './NavLink';
+import { Search, User, ShoppingCart } from "lucide-react";
+import IconButton from './IconButton';
 
 export default function Header() {
     return (
@@ -12,6 +14,17 @@ export default function Header() {
                     <NavLink href='/shop'>Shop</NavLink>
                     <NavLink href='/events'>Events</NavLink>
                     <NavLink href='/contact'>Contact</NavLink>
+                </div>
+                <div className='flex gap-8'>
+                    <IconButton href='/search'>
+                        <Search size={20} />
+                    </IconButton>
+                    <IconButton href='/login'>
+                        <User size={20} />
+                    </IconButton>
+                    <IconButton href='/shop'>
+                        <ShoppingCart size={20} />
+                    </IconButton>
                 </div>
             </nav>
         </header>
