@@ -1,7 +1,7 @@
-import Logo from './Logo';
-import NavLink from './NavLink';
+import Logo from '../ui/Logo';
+import NavLink from '../ui/NavLink';
 import { Search, User, ShoppingCart } from "lucide-react";
-import IconButton from './IconButton';
+import IconButton from '../ui/IconButton';
 
 export default function Header() {
     return (
