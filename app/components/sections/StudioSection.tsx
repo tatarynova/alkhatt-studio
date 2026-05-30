@@ -8,7 +8,7 @@ export default function StudioSection() {
                     <div className="space-y-6">
                         <h3 className="text-accent-gold uppercase text-center text-xs">about alkhatt</h3>
                         <p className="text-3xl font-light text-primary-dark leading-tight">A multidisciplinary creative studio dedicated to the preservation, education and evolution of the Islamic arts. </p>
-                        <p className="text-xs text-primary-dark/70 max-w-md leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eum nesciunt vitae.</p>
+                        <p className="text-xs text-primary-dark/70 max-w-md leading-relaxed">Rooted in heritage and guided by creativity, we exist to inspire deeper connection through artistic practice, cultural learning, and community.</p>
                         <a href="/about" className="text-xs uppercase tracking-widest text-primary-dark hover:text-accent-gold transition-colors duration-300">Our story → </a>
                     </div>
 

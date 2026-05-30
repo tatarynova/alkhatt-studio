@@ -20,7 +20,7 @@ const offerings = [
         href: "#"
     },
     {
-        title: "Resourses",
+        title: "Resources",
         description: "Guides, tools and creative materials",
         image: "/images/offerings4.jpg",
         href: "#"
@@ -45,19 +45,23 @@ function OfferingCard({ title, description, image, href }: {title: string; descr
             <div className="overflow-hidden mb-4">
                 <img src={image} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <div className="font-light text-primary-dark">
+                <h3 className="uppercase">{title}</h3>
+                <p>{description}</p> 
+            </div>
         </a>
     )
 }
 
 export default function Offerings() {
     return(
-        <section className="py-24 px-30">
+        <section className="py-24 px-24">
             <div className="max-w-7xl mx-auto">
-                <p className="text-accent-gold uppercase text-center text-xs">explore</p>
-                <h2 className="text-2xl text-center font-light text-primary-dark leading-tight">What We Offer</h2>
-                <div className="grid grid-cols-3 gap-16 items-center">
+                <div>
+                    <p className="text-accent-gold uppercase text-center text-xs py-3">explore</p>
+                    <h2 className="text-2xl text-center font-light text-primary-dark leading-tight">What We Offer</h2>
+                </div>
+                <div className="grid grid-cols-3 gap-16 items-center mt-12">
                     {offerings.map(item => (<OfferingCard key={item.title} {...item} /> ))}
                 </div>
             </div>
