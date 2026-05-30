@@ -1,6 +1,7 @@
 import Hero from './components/home/Hero';
 import StudioSection from './components/sections/StudioSection';
 import Offerings from './components/sections/WhatWeOffer';
+import Courses from './components/sections/CoursesSection';
 
 export default function Home() {
   
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <StudioSection />
       <Offerings />
+      <Courses />
     </main>
   );
 }

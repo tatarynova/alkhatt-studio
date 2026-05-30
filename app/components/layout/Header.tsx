@@ -3,6 +3,8 @@ import NavLink from '../ui/NavLink';
 import { Search, User, ShoppingCart } from "lucide-react";
 import IconButton from '../ui/IconButton';
 
+// navigation disappears when you scroll down
+
 export default function Header() {
     return (
         <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-teal/10 text-teal'>
