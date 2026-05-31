@@ -1,6 +1,6 @@
 export default function StudioSection() {
     return (
-        <section className="py-24 px-30">
+        <section className="py-24 px-24">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-2 gap-16 items-center">
 
