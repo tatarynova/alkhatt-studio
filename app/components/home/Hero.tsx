@@ -24,10 +24,10 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-start">
-                    <Button variant='primary' href='/about'>
+                    <Button variant='primary' href='/studio'>
                         explore the studio
                     </Button>
-                    <Button variant='secondary' href='/courses'>
+                    <Button variant='secondary' href='/learn'>
                         view courses
                     </Button>
                 </div>

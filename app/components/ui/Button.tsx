@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Button({ variant, href, children }: {variant: "primary" | "secondary"; href: string; children: React.ReactNode }) {
     const variantStyles = {
         primary: "border border-primary-light bg-transparent text-primary-light hover:bg-primary-light hover:text-primary-dark",
@@ -11,8 +13,11 @@ export default function Button({ variant, href, children }: {variant: "primary" 
     const fullClassName = `${baseStyles} ${styles}`;
 
     return (
-        <a href={href} className={fullClassName}>
+        <Link href={href} className={fullClassName}>
             {children}
-        </a>
+        </Link>
+        // <a href={href} className={fullClassName}>
+        //     {children}
+        // </a>
     );
 }

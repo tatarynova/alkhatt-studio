@@ -11,10 +11,10 @@ export default function Header() {
             <nav className='max-w-7xl mx-auto px-8 py-5 flex justify-between items-center'>
                 <Logo></Logo>
                 <div className='flex gap-12'>
-                    <NavLink href='/about'>About</NavLink>
-                    <NavLink href='/courses'>Courses</NavLink>
+                    <NavLink href='/studio'>Studio</NavLink>
+                    <NavLink href='/learn'>Learn</NavLink>
+                    <NavLink href='/community'>Community</NavLink>
                     <NavLink href='/shop'>Shop</NavLink>
-                    <NavLink href='/events'>Events</NavLink>
                     <NavLink href='/contact'>Contact</NavLink>
                 </div>
                 <div className='flex gap-8'>

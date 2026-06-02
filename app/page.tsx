@@ -1,7 +1,7 @@
 import Hero from './components/home/Hero';
-import StudioSection from './components/sections/StudioSection';
-import Offerings from './components/sections/WhatWeOffer';
-import Courses from './components/sections/CoursesSection';
+import StudioSection from './components/home/StudioSection';
+import Offerings from './components/home/WhatWeOffer';
+import Courses from './components/home/CoursesSection';
 
 export default function Home() {
   

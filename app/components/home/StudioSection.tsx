@@ -2,7 +2,7 @@ export default function StudioSection() {
     return (
         <section className="py-12 px-6 md:py-24 md:px-16">
             <div className="max-w-7xl mx-auto">
-                <h3 className="text-accent-gold uppercase text-center text-xs">about alkhatt</h3>
+                <h3 className="text-accent-gold uppercase text-center text-xs mb-6">about alkhatt</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
                     {/* Left column */}
