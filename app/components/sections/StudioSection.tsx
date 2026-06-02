@@ -1,6 +1,6 @@
 export default function StudioSection() {
     return (
-        <section className="py-24 px-24">
+        <section className="py-12 px-6 md:py-24 md:px-16">
             <div className="max-w-7xl mx-auto">
                 <h3 className="text-accent-gold uppercase text-center text-xs">about alkhatt</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -14,7 +14,7 @@ export default function StudioSection() {
                     </div>
 
                     {/* Rigth column */}
-                    <div className="relative pb-8 pl-8 order-first md:order-last">
+                    <div className="relative order-first md:order-last">
                         <img className="w-full h-96 object-cover" src="/images/studio-section.jpg" alt="Al Khatt Studio" />
                         <div className="absolute h-80 top-[50px] right-[-50px] bg-primary-dark text-primary-light px-8 max-w-xs text-center flex flex-col justify-center">
                             <p>Rooted in heritage</p>

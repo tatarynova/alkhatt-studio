@@ -23,7 +23,7 @@ export default function Hero() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex-col sm:flex-row gap-4 justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 justify-start">
                     <Button variant='primary' href='/about'>
                         explore the studio
                     </Button>

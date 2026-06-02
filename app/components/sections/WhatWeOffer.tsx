@@ -55,13 +55,13 @@ function OfferingCard({ title, description, image, href }: {title: string; descr
 
 export default function Offerings() {
     return(
-        <section className="py-24 px-24">
+        <section className="py-12 px-6 md:py-24 md:px-16">
             <div className="max-w-7xl mx-auto">
                 <div>
                     <p className="text-accent-gold uppercase text-center text-xs py-3">explore</p>
                     <h2 className="text-2xl text-center font-light text-primary-dark leading-tight">What We Offer</h2>
                 </div>
-                <div className="grid grid-cols-3 gap-16 items-center mt-12">
+                <div className="grid grid-cols-1 md:grid md:grid-cols-3 md:gap-16 items-center mt-12">
                     {offerings.map(item => (<OfferingCard key={item.title} {...item} /> ))}
                 </div>
             </div>
