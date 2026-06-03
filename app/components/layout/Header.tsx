@@ -1,18 +1,35 @@
+'use client';
 import Logo from '../ui/Logo';
 import NavLink from '../ui/NavLink';
 import { Search, User, ShoppingCart } from "lucide-react";
 import IconButton from '../ui/IconButton';
+import { useEffect, useState } from 'react';
 
 // navigation disappears when you scroll down
 
 export default function Header() {
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY < lastScrollY) {
+                setIsVisible(true);
+            } else if (currentScrollY > lastScrollY && currentScrollY > 500) {
+                setIsVisible(false);
+            }
+            setLastScrollY(currentScrollY);
+        }
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+        }, [lastScrollY]);
+
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-teal/10 text-primary-light'>
+        <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm text-primary-light ${isVisible ? 'translate-y-0' : '-translate-y-full'} `}>
             <nav className='max-w-7xl mx-auto px-8 py-5 flex justify-between items-center'>
-                {/* <div className='flex items-center'>
-                    <img width={40} src="/images/logo.png" alt="logo" />
-                    <Logo></Logo>
-                </div> */}
                 <Logo></Logo>
                 <div className='flex gap-12'>
                     <NavLink href='/studio'>Studio</NavLink>
