@@ -2,6 +2,7 @@ import Hero from './components/home/Hero';
 import StudioSection from './components/home/StudioSection';
 import Offerings from './components/home/WhatWeOffer';
 import Courses from './components/home/CoursesSection';
+import CTASection from './components/home/CTASection';
 
 export default function Home() {
   
@@ -11,6 +12,7 @@ export default function Home() {
       <StudioSection />
       <Offerings />
       <Courses />
+      <CTASection />
     </main>
   );
 }
