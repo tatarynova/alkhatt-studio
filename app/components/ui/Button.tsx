@@ -16,8 +16,5 @@ export default function Button({ variant, href, children }: {variant: "primary" 
         <Link href={href} className={fullClassName}>
             {children}
         </Link>
-        // <a href={href} className={fullClassName}>
-        //     {children}
-        // </a>
     );
 }

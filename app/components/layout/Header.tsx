@@ -9,6 +9,10 @@ export default function Header() {
     return (
         <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-teal/10 text-primary-light'>
             <nav className='max-w-7xl mx-auto px-8 py-5 flex justify-between items-center'>
+                {/* <div className='flex items-center'>
+                    <img width={40} src="/images/logo.png" alt="logo" />
+                    <Logo></Logo>
+                </div> */}
                 <Logo></Logo>
                 <div className='flex gap-12'>
                     <NavLink href='/studio'>Studio</NavLink>
