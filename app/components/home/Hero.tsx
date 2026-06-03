@@ -19,7 +19,7 @@ export default function Hero() {
 
                 <p className="text-xl md:text-xl font-light mb-12 text-primary-light">
                     The traditional Islamic arts <br />
-                    for contemorary generations.
+                    for contemporary generations.
                 </p>
 
                 {/* Buttons */}

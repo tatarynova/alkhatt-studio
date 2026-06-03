@@ -103,7 +103,7 @@ export default function Courses() {
                     </button>
                 </div>
 
-                <div className="text-center">
+                <div className="text-center py-16">
                     <a href="/courses" className="text-xs uppercase tracking-widest hover:text-accent-gold transition-colors duration-300">View all Courses & Workshops → </a>
                 </div>                
             </div>    
