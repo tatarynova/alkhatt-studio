@@ -2,7 +2,7 @@ import Button from '../ui/Button';
 
 export default function Hero() {
     return (
-        <section className="relative h-screen flex items-center justify-start">
+        <section className="relative h-screen flex items-end justify-start">
             {/* Background image */}
             <div
             className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/images/hero-bg.jpg')"}}>
@@ -10,8 +10,8 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-primary-dark/60"></div>
             </div>
             {/* Content */}
-            <div className="relative z-10 text-left text-primary-light max-w-4xl px-20">
-                <h1 className="text-5xl md:text-6xl font-light mb-6 leading-tight">
+            <div className="relative z-10 text-left text-primary-light max-w-4xl px-28 py-34">
+                <h1 className="text-3xl md:text-5xl font-light leading-tight">
                     Preserving. <br />
                     Teaching. <br />
                     Evolving.

@@ -17,7 +17,7 @@ export default function Header() {
 
             if (currentScrollY < lastScrollY) {
                 setIsVisible(true);
-            } else if (currentScrollY > lastScrollY && currentScrollY > 500) {
+            } else if (currentScrollY > lastScrollY && currentScrollY > 600) {
                 setIsVisible(false);
             }
             setLastScrollY(currentScrollY);
