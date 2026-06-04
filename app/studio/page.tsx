@@ -19,13 +19,18 @@ export default function StudioPage() {
       {/* About Studio */}
       <section className="py-12 px-6 md:py-24 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Left column */}
             <div className="space-y-6">
               <p className="font-light text-primary-dark leading-tight">Al Khatt Studio is a creative home for the traditional Islamic arts — a space where Arabic calligraphy, geometric design, illumination, and manuscript arts are not relics of the past, but living, breathing practices for the present.</p>
               <p className="font-light text-primary-dark leading-tight">We exist at the intersection of heritage and creativity. Our work is rooted in the belief that these art forms carry something rare: a capacity to slow us down, reconnect us with beauty, and return us to ourselves. In a world that moves fast and forgets deeply, the Islamic arts offer a path back to intentionality and presence.</p>
               <p className="font-light text-primary-dark leading-tight">Through courses, workshops, events, and a growing creative community, Al Khatt Studio is building something more than a platform — a place where artists, students, and curious souls can learn, grow, and belong. Whether you are picking up a reed pen for the first time or deepening a lifelong practice, there is space for you here.</p>
               <p className="font-light text-primary-dark leading-tight">Every composition begins with a single point — the Nuqta. So does every journey. This is yours.</p>
               <a href="/about" className="uppercase tracking-widest text-primary-dark hover:text-accent-gold transition-colors duration-300">Find out more → </a>
+            </div>
+            {/* Right column */}
+            <div>
+              
             </div>
           </div>
         </div>
