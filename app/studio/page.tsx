@@ -1,36 +1,49 @@
+import NuqtaDiamond from "../components/ui/NuqtaDiamond";
+
 export default function StudioPage() {
   return (
     <main>
+
+
       {/* Hero section */}
-      <section className="relative h-screen flex items-end justify-start">
+      <section className="relative h-screen md:h-screen flex items-end justify-start">
+
+        {/* Background image */}
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/images/hero-bg.jpg')"}}>
           <div className="absolute inset-0 bg-primary-dark/60"></div>
         </div>
+
+
         {/* Content */}
-        <div className="relative z-10 text-left text-primary-light max-w-4xl px-28 py-34">
+        <div className="relative z-10 text-left text-primary-light max-w-4xl px-6 py-16 md:px-28 md:py-34">
           <p className="text-xl md:text-xl font-light text-accent-gold uppercase">About Al Khatt</p>
           <h1 className="text-4xl md:text-6xl font-light leading-tight">
             Rooted in heritage. <br />
-            Guided by creativity. <br />
+            <span className="italic">Guided by creativity.</span> <br />
             Driven by purpose.
           </h1>
-        </div>          
+        </div> 
+
       </section>
+
+
       {/* About Studio */}
-      <section className="py-12 px-6 md:py-24 md:px-16">
+      <section className="py-12 px-6 md:py-24 md:px-28">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Left column */}
             <div className="space-y-6">
-              <p className="font-light text-primary-dark leading-tight">Al Khatt Studio is a creative home for the traditional Islamic arts — a space where Arabic calligraphy, geometric design, illumination, and manuscript arts are not relics of the past, but living, breathing practices for the present.</p>
-              <p className="font-light text-primary-dark leading-tight">We exist at the intersection of heritage and creativity. Our work is rooted in the belief that these art forms carry something rare: a capacity to slow us down, reconnect us with beauty, and return us to ourselves. In a world that moves fast and forgets deeply, the Islamic arts offer a path back to intentionality and presence.</p>
-              <p className="font-light text-primary-dark leading-tight">Through courses, workshops, events, and a growing creative community, Al Khatt Studio is building something more than a platform — a place where artists, students, and curious souls can learn, grow, and belong. Whether you are picking up a reed pen for the first time or deepening a lifelong practice, there is space for you here.</p>
-              <p className="font-light text-primary-dark leading-tight">Every composition begins with a single point — the Nuqta. So does every journey. This is yours.</p>
-              <a href="/about" className="uppercase tracking-widest text-primary-dark hover:text-accent-gold transition-colors duration-300">Find out more → </a>
+              <h3 className="text-accent-gold uppercase text-xs">- about the studio</h3>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-dark leading-tight">More than a studio - <br />
+              a <span className="font-style: italic">living tradition.</span> </h2>
+              <p className="font-light text-primary-dark leading-tight">Al Khatt Studio is a multidisciplinary creative studio dedicated to the preservation, education, and evolution of the traditional Islamic arts. Rooted in heritage and guided by creativity, we exist to inspire deeper connection through artistic practice, cultural learning, and community.</p>
+              <p className="font-light text-primary-dark leading-tight">We believe the Islamic arts are living expressions of beauty, meaning, discipline, and identity that continue to shape the way we see ourselves and the world around us.</p>
+              <p className="font-light text-primary-dark leading-tight">Our work focuses on Arabic calligraphy, geometric design, illumination, and manuscript arts — while embracing contemporary approaches that allow these traditions to evolve and speak to modern audiences.</p>
+              <a href="/about" className="text-sm uppercase tracking-widest text-primary-dark hover:text-accent-gold transition-colors duration-300">Find out more → </a>
             </div>
             {/* Right column */}
-            <div>
-              
+            <div className="mx-auto">
+              <NuqtaDiamond></NuqtaDiamond>
             </div>
           </div>
         </div>
