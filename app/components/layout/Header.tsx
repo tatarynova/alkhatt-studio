@@ -34,7 +34,7 @@ export default function Header() {
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm text-primary-light ${isVisible ? 'translate-y-0' : '-translate-y-full'} `}>
             <nav className='max-w-screen px-6 py-5 flex justify-between items-center'>
-                <Logo></Logo>
+                <Logo color='light'></Logo>
 
                 {/* Desktop nav links */}
                 <div className='hidden md:flex gap-12'>

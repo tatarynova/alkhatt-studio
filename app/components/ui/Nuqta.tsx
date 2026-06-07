@@ -7,7 +7,7 @@ export default function Nuqta({
 }) {
     const colors = {
         default: '#f1efe8',
-        dark: '#030311',
+        dark: '#1a3140',
         accent: '#691315',
     }
 
