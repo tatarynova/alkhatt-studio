@@ -24,6 +24,13 @@ const courses = [
         href: "#",
         type: "online"
     },
+    {
+        title: "Geometric Design Foundations",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu eros gravida, hendrerit enim suscipit, consequat nulla. Morbi ac interdum.",
+        image: "/images/offerings4.jpg",
+        href: "#",
+        type: "online"
+    },
 ]
 
 function CourseCard({ title, description, image, href, type }:{ 
@@ -34,19 +41,21 @@ function CourseCard({ title, description, image, href, type }:{
     type: string
  }) {
     return (
-        <div className="rounded-lg overflow-hidden flex flex-col h-full group">
+        <div className="rounded-lg bg-primary-light overflow-hidden flex flex-col h-full group">
 
-            <div className="relative">
+            {/* ? */}
+            <div className="relative flex-shrink-0">
                 <img 
                 className="w-full h-56 object-cover group-hover:scale-102 transition-transform duration-500" src={image} alt={title} />
+
                 {/* Badge on top of image */}
                 <div className="absolute top-45 left-4 bg-primary-light/90 px-3 py-0.1 rounded-sm">
                     <span className="text-xs uppercase text-accent-gold tracking-widest">{type}</span>
                 </div>
             </div>  
 
-            <div className="bg-primary-light p-5 flex flex-col flex-1 font-light space-y-3">
-                <h3 className="text-base">{title}</h3>
+            <div className="p-5 text-primary-dark flex flex-col flex-1 font-light space-y-3">
+                <h3 className="text-primary-dark">{title}</h3>
                 <p className="text-xs leading-relaxed flex-1">{description}</p>
                 <a href={href} className="uppercase text-xs tracking-widest hover:text-accent-gold transition-colors duration-300 mt-auto">learn more →</a>
             </div>
@@ -56,8 +65,10 @@ function CourseCard({ title, description, image, href, type }:{
 
 export default function Courses() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleCount = 3; 
-    const maxIndex = courses.length - visibleCount; 
+
+    const desktopVisible =3;
+    const mobileVisible = 1;
+    const maxIndex = courses.length - 1; 
 
     const handlePrev = () => {
         setCurrentIndex(prev => Math.max(prev - 1, 0));
@@ -68,28 +79,29 @@ export default function Courses() {
 
     return(
         <section className="py-12 px-6 md:py-24 md:px-28 text-primary-dark">
-            {/* div for the entire section */}
+
             <div className="max-w-7xl mx-auto">
-                {/* div for titles before courses cards */}
+
                 <div className="mb-12">
                     <p className="text-center text-accent-gold uppercase text-xs mb-4">featured</p>
                     <h2 className="text-center text-2xl font-light text-primary-dark leading-tight">Courses & Workshops</h2>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
 
                     {/* left arrow */}
                     <button 
                     onClick={handlePrev}
                     disabled={currentIndex === 0}
-                    className="flex-shrink-0 p-2 text-primary-dark disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300">
+                    className="flex-shrink-0 w-8  h-8 flex items-center justify-center text-primary-dark disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300" aria-label="Previous">
                         <ChevronLeft size={20} />
                     </button>
 
                     <div className="overflow-hidden flex-1">
-                        <div className="flex gap-6 transition-transform duration-500 ease-out" style={{transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`}}>
+
+                        <div className="flex gap-6 transition-transform duration-500 ease-out" style={{transform: `translateX(calc(-${currentIndex} * (100% / 3 + 8px)))`}}>
                             {courses.map(item => (
-                                <div key={item.title} className="w-[85vw] sm:w-[45vw] md:w-80 h-[420px]">
+                                <div key={item.title} className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)]">
                                 <CourseCard {...item} />
                                 </div>
                             ))}
@@ -98,7 +110,7 @@ export default function Courses() {
                     <button 
                     onClick={handleNext}
                     disabled={currentIndex === maxIndex}
-                    className="flex-shrink-0 p-2 text-primary-dark disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300">
+                    className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-primary-dark disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300" aria-label="Next">
                         <ChevronRight size={20} />
                     </button>
                 </div>
