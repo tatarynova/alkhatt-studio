@@ -1,5 +1,6 @@
 import NuqtaDiamond from "../components/ui/NuqtaDiamond";
 import Nuqta from "../components/ui/Nuqta";
+import { Shield, GraduationCap, Sprout, Globe } from "lucide-react";
 
 export default function StudioPage() {
   return (
@@ -30,9 +31,12 @@ export default function StudioPage() {
 
       {/* About Studio */}
       <section className="py-12 px-6 md:py-24 md:px-28">
+
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
             {/* Left column */}
+
             <div className="border-transparent border-r pr-6 md:border-primary-dark/20 space-y-6">
               <h3 className="text-accent-gold uppercase text-xs">- about the studio</h3>
               <h2 className="text-2xl md:text-3xl font-light text-primary-dark leading-tight">More than a studio - <br />
@@ -42,7 +46,9 @@ export default function StudioPage() {
               <p className="font-light text-primary-dark leading-tight">Our work focuses on Arabic calligraphy, geometric design, illumination, and manuscript arts — while embracing contemporary approaches that allow these traditions to evolve and speak to modern audiences.</p>
               <a href="/about" className="text-sm uppercase tracking-widest text-primary-dark hover:text-accent-gold transition-colors duration-300">Find out more → </a>
             </div>
+
             {/* Right column */}
+
             <div className="mx-auto space-y-6">
               <div className="mx-auto flex gap-8 justify-between items-center">
                 <Nuqta color="accent" size="medium"></Nuqta>
@@ -58,8 +64,60 @@ export default function StudioPage() {
             </div>
           </div>
         </div>
+
       </section>
-      <div className="border-t border-primary-dark/20 py-6 mx-6 md:py-12 md:mx-16"></div>   
+
+      {/* Value section */}
+
+      <section className="py-12 px-6 md:py-24 md:px-28 bg-accent-blue height-screen">
+
+        {/* flex box with titles */}
+        {/* Section titles */}
+        <div className="flex justify-between items-end">
+          <div>
+            <h3 className="text-accent-red uppercase text-xs">- our values</h3>
+            <h2 className="text-2xl md:text-3xl font-light text-primary-light leading-tight">What we stand for,<br />
+            a <span className="font-style: italic">and why it matters.</span> </h2> 
+          </div>
+
+          <div>
+            <p className="text-right text-primary-light/50 font-light leading-tight text-xs">Each value flows from the meaning of the Nuqta <br /> - the single point from which all things begin</p>
+          </div>
+        </div>
+
+        {/* grid with columns */}
+        {/* Values */}
+        <div className="grid grid-cols-2 md:grid md:grid-cols-4 gap-1 pt-10">
+          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
+            <Shield size={40}></Shield>
+            <h4 className="text-accent-red uppercase text-light text-xs">01 - preserve</h4>
+            <h3 className="text-2xl md:text-xl">Honour timeless traditions</h3>
+            <p className="text-primary-light/50 font-light leading-tight text-xs">We safeguard thesacred art forms that have connected generations - Arabic calligraphy, geometric design, and manuscript arts - ensuring they remain vital and alive</p>
+          </div>
+          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
+            <GraduationCap size={40}></GraduationCap>
+            <h4 className="text-accent-red uppercase text-light text-xs">02 - educate</h4>
+            <h3 className="text-2xl md:text-xl">Share knowledge and skill</h3>
+            <p className="text-primary-light/50 font-light leading-tight text-xs">Throught courses,  workshops, and resources, we make the discipline and depth of Islamic arts accessible to learners at every stage of their journey.</p>
+          </div>
+          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
+            <Sprout size={40}></Sprout>
+            <h4 className="text-accent-red uppercase text-light text-xs">03 - nurture</h4>
+            <h3 className="text-2xl md:text-xl">Cultivate creative confidence</h3>
+            <p className="text-primary-light/50 font-light leading-tight text-xs">Art transforms. We nurture creative confidence and personal growth, helping individuals reconnect with intention, presence, and inner purpose through practice.</p>
+          </div>
+          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
+            <Globe size={40}></Globe>
+            <h4 className="text-accent-red uppercase text-light text-xs">04 - connect </h4>
+            <h3 className="text-2xl md:text-xl">Build inclusive community</h3>
+            <p className="text-primary-light/50 font-light leading-tight text-xs">We are a global gathering place for artistsm students, and creatie - creating spaces where culture, cretivity, and belonging can be explored with depth and sincerity.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <div className="border-t border-primary-dark/20 py-6 mx-6 md:py-12 md:mx-16"></div>
+
       {/* Founder section */}
       <section className="py-12 px-6 md:py-24 md:px-28">
         <div className="max-w-7xl mx-auto space-y-6">
