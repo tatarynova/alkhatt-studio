@@ -1,6 +1,44 @@
 import NuqtaDiamond from "../components/ui/NuqtaDiamond";
 import Nuqta from "../components/ui/Nuqta";
-import { Shield, GraduationCap, Sprout, Globe } from "lucide-react";
+import { Shield, GraduationCap, Sprout, Globe, LucideIcon } from "lucide-react";
+
+const values = [
+  {
+    icon: Shield,
+    name: "01 - preserve",
+    title: "Honour timeless traditions",
+    description: "We safeguard thesacred art forms that have connected generations - Arabic calligraphy, geometric design, and manuscript arts - ensuring they remain vital and alive"
+  },
+  {
+    icon: GraduationCap,
+    name: "02 - educate",
+    title: "Share knowledge and skill",
+    description: "Throught courses,  workshops, and resources, we make the discipline and depth of Islamic arts accessible to learners at every stage of their journey."
+  },
+  {
+    icon: Sprout,
+    name: "03 - nurture",
+    title: "Cultivate creative confidence",
+    description: "Art transforms. We nurture creative confidence and personal growth, helping individuals reconnect with intention, presence, and inner purpose through practice."
+  },
+  {
+    icon: Globe,
+    name: "04 - connect",
+    title: "Build inclusive community",
+    description: "We are a global gathering place for artistsm students, and creatie - creating spaces where culture, cretivity, and belonging can be explored with depth and sincerity."
+  }
+]
+
+function ValuesCard({ icon: Icon, name, title, description }: {icon: LucideIcon; name: string; title: string; description: string }) {
+  return (
+    <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
+      <Icon size={40}></Icon>
+      <h4 className="text-accent-red uppercase text-light text-xs">{name}</h4>
+      <h3 className="text-2xl md:text-xl">{title}</h3>
+      <p className="text-primary-light/50 font-light leading-tight text-xs">{description}</p>
+    </div>
+  )
+}
 
 export default function StudioPage() {
   return (
@@ -88,30 +126,7 @@ export default function StudioPage() {
         {/* grid with columns */}
         {/* Values */}
         <div className="grid grid-cols-2 md:grid md:grid-cols-4 gap-1 pt-10">
-          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
-            <Shield size={40}></Shield>
-            <h4 className="text-accent-red uppercase text-light text-xs">01 - preserve</h4>
-            <h3 className="text-2xl md:text-xl">Honour timeless traditions</h3>
-            <p className="text-primary-light/50 font-light leading-tight text-xs">We safeguard thesacred art forms that have connected generations - Arabic calligraphy, geometric design, and manuscript arts - ensuring they remain vital and alive</p>
-          </div>
-          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
-            <GraduationCap size={40}></GraduationCap>
-            <h4 className="text-accent-red uppercase text-light text-xs">02 - educate</h4>
-            <h3 className="text-2xl md:text-xl">Share knowledge and skill</h3>
-            <p className="text-primary-light/50 font-light leading-tight text-xs">Throught courses,  workshops, and resources, we make the discipline and depth of Islamic arts accessible to learners at every stage of their journey.</p>
-          </div>
-          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
-            <Sprout size={40}></Sprout>
-            <h4 className="text-accent-red uppercase text-light text-xs">03 - nurture</h4>
-            <h3 className="text-2xl md:text-xl">Cultivate creative confidence</h3>
-            <p className="text-primary-light/50 font-light leading-tight text-xs">Art transforms. We nurture creative confidence and personal growth, helping individuals reconnect with intention, presence, and inner purpose through practice.</p>
-          </div>
-          <div className="bg-primary-light/10 text-primary-light space-y-3 px-6 py-12 hover:scale-102 transition-transform duration-500">
-            <Globe size={40}></Globe>
-            <h4 className="text-accent-red uppercase text-light text-xs">04 - connect </h4>
-            <h3 className="text-2xl md:text-xl">Build inclusive community</h3>
-            <p className="text-primary-light/50 font-light leading-tight text-xs">We are a global gathering place for artistsm students, and creatie - creating spaces where culture, cretivity, and belonging can be explored with depth and sincerity.</p>
-          </div>
+          {values.map(item => (<ValuesCard key={item.title} {...item} />))}
         </div>
 
       </section>
