@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useRef  } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const courses = [
@@ -64,18 +64,15 @@ function CourseCard({ title, description, image, href, type }:{
 }
 
 export default function Courses() {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
-    const desktopVisible =3;
-    const mobileVisible = 1;
-    const maxIndex = courses.length - 1; 
-
-    const handlePrev = () => {
-        setCurrentIndex(prev => Math.max(prev - 1, 0));
-    };
-    const handleNext = () => {
-        setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
-    };
+    const scroll = (direction: 'left' | 'right') => {
+        if (!scrollRef.current) return;
+        const cardWidth = scrollRef.current.querySelector('div')?.offsetWidth ?? 0;
+        scrollRef.current.scrollBy({
+            left: direction === "left" ? -cardWidth : cardWidth, behavior: 'smooth'
+        });
+    }
 
     return(
         <section className="py-12 px-6 md:py-24 md:px-28 text-primary-dark">
@@ -91,25 +88,22 @@ export default function Courses() {
 
                     {/* left arrow */}
                     <button 
-                    onClick={handlePrev}
-                    disabled={currentIndex === 0}
+                    onClick= {() => scroll('left')}
                     className="flex-shrink-0 w-8  h-8 flex items-center justify-center text-primary-dark disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300" aria-label="Previous">
                         <ChevronLeft size={20} />
                     </button>
 
-                    <div className="overflow-hidden flex-1">
-
-                        <div className="flex gap-6 transition-transform duration-500 ease-out" style={{transform: `translateX(calc(-${currentIndex} * (100% / 3 + 8px)))`}}>
+                    <div 
+                        ref={scrollRef}
+                        className="overflow-x-auto scroll-smooth [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex-1 flex gap-6 ">
                             {courses.map(item => (
-                                <div key={item.title} className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)]">
+                                <div key={item.title} className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] [scroll-snap-align:start]">
                                 <CourseCard {...item} />
                                 </div>
-                            ))}
-                        </div>                    
+                            ))}                 
                     </div>
                     <button 
-                    onClick={handleNext}
-                    disabled={currentIndex === maxIndex}
+                    onClick={() => scroll('right')}
                     className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-primary-dark disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300" aria-label="Next">
                         <ChevronRight size={20} />
                     </button>
