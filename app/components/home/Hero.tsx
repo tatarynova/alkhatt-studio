@@ -10,7 +10,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-primary-dark/60"></div>
             </div>
             {/* Content */}
-            <div className="relative z-10 text-left text-primary-light max-w-4xl px-28 py-34">
+            <div className="relative z-10 text-left text-primary-light max-w-4xl py-12 px-6 md:py-24 md:px-28">
                 <h1 className="text-3xl md:text-5xl font-light leading-tight">
                     Preserving. <br />
                     Teaching. <br />

@@ -67,7 +67,7 @@ export default function Courses() {
     };
 
     return(
-        <section className="py-12 px-6 md:py-24 md:px-16 text-primary-dark">
+        <section className="py-12 px-6 md:py-24 md:px-28 text-primary-dark">
             {/* div for the entire section */}
             <div className="max-w-7xl mx-auto">
                 {/* div for titles before courses cards */}

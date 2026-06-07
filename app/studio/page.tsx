@@ -1,4 +1,5 @@
 import NuqtaDiamond from "../components/ui/NuqtaDiamond";
+import Nuqta from "../components/ui/Nuqta";
 
 export default function StudioPage() {
   return (
@@ -32,7 +33,7 @@ export default function StudioPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Left column */}
-            <div className="space-y-6">
+            <div className="border-transparent border-r pr-6 md:border-primary-dark/20 space-y-6">
               <h3 className="text-accent-gold uppercase text-xs">- about the studio</h3>
               <h2 className="text-2xl md:text-3xl font-light text-primary-dark leading-tight">More than a studio - <br />
               a <span className="font-style: italic">living tradition.</span> </h2>
@@ -42,15 +43,25 @@ export default function StudioPage() {
               <a href="/about" className="text-sm uppercase tracking-widest text-primary-dark hover:text-accent-gold transition-colors duration-300">Find out more → </a>
             </div>
             {/* Right column */}
-            <div className="mx-auto">
-              <NuqtaDiamond></NuqtaDiamond>
+            <div className="mx-auto space-y-6">
+              <div className="mx-auto flex gap-8 justify-between items-center">
+                <Nuqta color="accent" size="medium"></Nuqta>
+                <div className="mx-auto max-w-100vw">
+                  <NuqtaDiamond></NuqtaDiamond>
+                </div>
+                <Nuqta color="accent" size="medium"></Nuqta>
+              </div>
+              <div className="bg-accent-red/10 border-l-[3px] border-accent-red p-6">
+                <p className="italic font-light text-primary-dark leading-tight">"Every masterpiece begins with a single point. Creativity begins the same way - with a single intention, a single mark, a single step into the unknown."</p>
+                <p className="pt-3 font-light text-sm leading-tight uppercase text-accent-red">- The nuqta philosophy</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <div className="border-t border-primary-dark/20 py-6 mx-6 md:py-12 md:mx-16"></div>   
       {/* Founder section */}
-      <section className="py-12 px-6 md:py-24 md:px-16">
+      <section className="py-12 px-6 md:py-24 md:px-28">
         <div className="max-w-7xl mx-auto space-y-6">
           <p className="font-light text-primary-dark leading-tight">
             Zakariyya is an Arabic calligrapher, artist, and designer — and the founding vision behind Al Khatt Studio. His work explores the space where traditional Islamic artistic practice meets contemporary visual expression, creating pieces that are grounded in heritage yet speak to modern eyes.

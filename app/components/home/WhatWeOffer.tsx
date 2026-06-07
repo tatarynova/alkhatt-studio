@@ -55,7 +55,7 @@ function OfferingCard({ title, description, image, href }: {title: string; descr
 
 export default function Offerings() {
     return(
-        <section className="py-12 px-6 md:py-24 md:px-16">
+        <section className="py-12 px-6 md:py-24 md:px-28">
             <div className="max-w-7xl mx-auto">
                 <div>
                     <p className="text-accent-gold uppercase text-center text-xs py-3">explore</p>
